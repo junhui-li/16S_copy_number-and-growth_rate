@@ -1,0 +1,7 @@
+pick_otus:enable_rev_strand_match True
+align_seqs.py:template_fp /home/username/silva/SILVA_132_QIIME_release/core_alignment/80_core_alignment.fna
+filter_alignment:allowed_gap_frac 0.80
+filter_alignment:entropy_threshold 0.10
+filter_alignment:suppress_lane_mask_filter True
+assign_taxonomy:reference_seqs_fp /home/username/silva/SILVA_132_QIIME_release/rep_set/rep_set_16S_only/97/silva_132_97_16S.fna
+assign_taxonomy:id_to_taxonomy_fp /home/username/silva/SILVA_132_QIIME_release/taxonomy/16S_only/97/taxonomy_7_levels.txt
