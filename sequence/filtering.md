@@ -1,5 +1,5 @@
 #!/bin/bash
-# to fillter the samples with sequences less than 3000
+# to filter the samples with sequences less than 3000
 
 for i in Dimensions.fna
 do
