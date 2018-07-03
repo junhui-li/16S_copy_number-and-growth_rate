@@ -1,7 +1,7 @@
 #!/bin/bash
 # to filter the samples with sequences less than 3000
 
-# in case you have many datasetes, run in a loop
+# in case you have many datasetes to filter, run in a loop
 for i in Dimensions.fna
 do
 echo $i
