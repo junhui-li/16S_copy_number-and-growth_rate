@@ -1,7 +1,7 @@
 #!/bin/bash
 # to fillter the samples with sequences less than 3000
 
-for i in Dimensions_chimera_filtered_seqs.fna
+for i in Dimensions.fna
 do
 echo $i
 
