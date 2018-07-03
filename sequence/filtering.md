@@ -33,7 +33,7 @@ tail -n +2 $i.sample.txt > $i.sample1.txt # samples with >=3000 seqs
 fgrep -F -f $i.sample1.txt $i.2 | awk -F ">" '{print $2}' > $i.filtered.sample.txt
 
 # borrowed from from Rob Edwards’ lab at San Diego State University 
-perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' $i.filtered.sample.txt $i.1 > $i.filtered.fna
+perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' $i.filtered.sample.txt $i.1 > $i.filtered.fna # here is the filtered sequence
 
 rm $i.2
 rm $i.3
