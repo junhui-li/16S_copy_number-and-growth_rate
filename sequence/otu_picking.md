@@ -29,23 +29,22 @@ dim_OTU_sub.txt #run in R
 biom convert -i $PWD/Dimensions/SILVA132/dim_OTU_sub.txt -o $PWD/Dimensions/SILVA132/dim_OTU_sub.biom --to-hdf5 --table-type="OTU table"
 
 
-#7 summarize sequences in each sample
-
+#7 summarize sequences in each sample:
 biom summarize-table -i dim_OTU_sub.biom -o dim_summary.txt
 
 
 #8 the otu table were subsampled (rarefied) at 400 seqs/sample (-d) 100 times (-n) using the command in QIIME: multiple_rarefactions_even_depth.py
 
 
-#9 convert all the rarefied_otu_tables.biom to *.txt format in QIIME
+#9 convert all the rarefied_otu_tables.biom to *.txt format in QIIME: 
 biom convert -i $PWD/Dimensions/SILVA132/rarefied_otu_tables/rarefaction_4000_0.biom -o $PWD/Dimensions/SILVA132/rarefied_otu_tables/rarefaction_4000_0.txt --to-tsv
 
 
-#10 remove # in the rarefaction_4000_*.txt
+#10 remove # in the rarefaction_4000_*.txt: 
 merge_rarefactions.R --> dimensions_OTU_un_sub_rarefaction_ave.txt
 
 
-#11 convert the dimensions_OTU_un_sub_rarfaction_ave.txt to dimensions_OTU_un_sub_rarfaction_ave.biom
+#11 convert the dimensions_OTU_un_sub_rarfaction_ave.txt to dimensions_OTU_un_sub_rarfaction_ave.biom: 
 biom convert -i /home/username/Dimensions/SILVA132/rarefied_otu_tables/dimensions_OTU_un_sub_rarfaction_ave.txt -o /home/username/Dimensions/SILVA132/rarefied_otu_tables/dimensions_OTU_un_sub_rarfaction_ave.biom  --to-hdf5 --table-type="OTU table"
 
 
